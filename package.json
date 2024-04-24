@@ -6,15 +6,12 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@hello-pangea/dnd": "^16.0.0",
-    "@reduxjs/toolkit": "^2.2.2",
+    "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "@types/react-router": "^5.1.20",
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
     "@visx/pattern": "2.10.0",
-    "antd": "^5.16.0",
+    "antd": "^5.3.0",
     "apexcharts": "^3.23.0",
     "axios": "^0.21.0",
     "concurrently": "^5.3.0",
@@ -50,9 +47,8 @@
     "react-markdown": "^8.0.3",
     "react-number-format": "^4.4.1",
     "react-quill": "^2.0.0",
-    "react-redux": "^9.1.0",
+    "react-redux": "^7.2.8",
     "react-resize-detector": "^7.1.2",
-    "react-router": "^5.3.4",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1",
     "react-simple-maps": "^3.0.0",
@@ -75,7 +71,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app"
+      "react-app",
+      "react-app/jest"
     ]
   },
   "browserslist": {
@@ -91,23 +88,12 @@
     ]
   },
   "devDependencies": {
-    "@types/antd": "^1.0.0",
-    "@types/history": "^4.7.11",
-    "@types/lodash": "^4.17.0",
-    "@types/react": "^18.2.73",
-    "@types/react-color": "^3.0.12",
-    "@types/react-copy-to-clipboard": "^5.0.7",
-    "@types/react-dom": "^18.2.23",
-    "@types/react-frame-component": "^4.1.6",
-    "@types/react-simple-maps": "^3.0.4",
-    "@types/react-syntax-highlighter": "^15.5.11",
     "autoprefixer": "^9.8.4",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-debug": "^4.0.0",
     "gulp-less": "^4.0.1",
     "gulp-postcss": "^8.0.0",
-    "less-plugin-npm-import": "^2.1.0",
-    "typescript": "^5.4.3"
+    "less-plugin-npm-import": "^2.1.0"
   }
 }
