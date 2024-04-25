@@ -1,4 +1,4 @@
-import { DashboardOutlined,AntDesignOutlined } from '@ant-design/icons';
+import { DashboardOutlined, ProfileOutlined, ProjectOutlined, CalendarOutlined, FolderOpenTwoTone } from '@ant-design/icons';
 import { APP_PREFIX_PATH } from 'configs/AppConfig'
 
 
@@ -15,10 +15,34 @@ const dashBoardNavTree = [{
       key: 'applications',
       path: `${APP_PREFIX_PATH}/applications`,
       title: 'sidenav.apps.project.applications',
-      icon: AntDesignOutlined,
+      icon: ProjectOutlined,
       breadcrumb: false,
       submenu: []
-    }
+    },
+    {
+      key: 'components-data-display-calendar',
+      path: `${APP_PREFIX_PATH}/calendar`,
+      title: 'sidenav.components.dataDisplay.calendar',
+      icon: CalendarOutlined,
+      breadcrumb: true,
+      submenu: []
+    },
+    {
+      key: 'extra-pages-profile',
+      path: `${APP_PREFIX_PATH}/profile`,
+      title: 'sidenav.pages.profile',
+      icon: ProfileOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
+    {
+      key: 'extra-pages-list',
+      path: `${APP_PREFIX_PATH}/list`,
+      title: 'Camponies',
+      icon: FolderOpenTwoTone,
+      breadcrumb: false,
+      submenu: []
+    },
   ]
 }]
 

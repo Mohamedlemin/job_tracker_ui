@@ -82,7 +82,6 @@ export const AppLayout = ({ navCollapsed, navType, direction, children }) => {
                             </Suspense>
                         </Content>
                     </AppContent>
-                    <Footer />
                 </Layout>
             </Layout>
             {isMobile && <MobileNav routeInfo={currentRouteInfo} />}

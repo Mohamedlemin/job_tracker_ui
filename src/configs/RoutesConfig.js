@@ -29,5 +29,20 @@ export const protectedRoutes = [
         key: 'applications.default',
         path: `${APP_PREFIX_PATH}/applications`,
         component: React.lazy(() => import('views/app-views/apps/project/scrumboard')),
-    }
+    },
+    {
+        key: 'apps.calendar',
+        path: `${APP_PREFIX_PATH}/calendar`,
+        component: React.lazy(() => import('views/app-views/apps/calendar')),
+    },
+    {
+        key: 'apps.profile',
+        path: `${APP_PREFIX_PATH}/profile`,
+        component: React.lazy(() => import('views/app-views/apps/profile')),
+    },
+    {
+        key: 'apps.profile',
+        path: `${APP_PREFIX_PATH}/list`,
+        component: React.lazy(() => import('views/app-views/apps/user-list')),
+    },
 ]
