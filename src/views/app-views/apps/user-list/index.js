@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { Card, Table, Tag, Tooltip, message, Button } from 'antd';
+import { Card, Table, Tag, Tooltip, message, Button, Row, Col } from 'antd';
 import { EyeOutlined, DeleteOutlined } from '@ant-design/icons';
 import dayjs from 'dayjs';
 import UserView from './UserView';
 import AvatarStatus from 'components/shared-components/AvatarStatus';
 import userData from "assets/data/user-list.data.json";
+import Search from 'antd/es/input/Search';
+
 
 export class UserList extends Component {
 
@@ -40,7 +42,7 @@ export class UserList extends Component {
 
 		const tableColumns = [
 			{
-				title: 'User',
+				title: 'Campony Name',
 				dataIndex: 'name',
 				render: (_, record) => (
 					<div className="d-flex">
@@ -56,14 +58,14 @@ export class UserList extends Component {
 				},
 			},
 			{
-				title: 'Role',
+				title: 'Location',
 				dataIndex: 'role',
 				sorter: {
 					compare: (a, b) => a.role.length - b.role.length,
 				},
 			},
 			{
-				title: 'Last online',
+				title: 'Job Title',
 				dataIndex: 'lastOnline',
 				render: date => (
 					<span>{dayjs.unix(date).format("MM/DD/YYYY")} </span>
@@ -71,7 +73,7 @@ export class UserList extends Component {
 				sorter: (a, b) => dayjs(a.lastOnline).unix() - dayjs(b.lastOnline).unix()
 			},
 			{
-				title: 'Status',
+				title: 'Main Skill',
 				dataIndex: 'status',
 				render: status => (
 					<Tag className ="text-capitalize" color={status === 'active'? 'cyan' : 'red'}>{status}</Tag>
@@ -96,12 +98,26 @@ export class UserList extends Component {
 			}
 		];
 		return (
+			<>
+			<Card>
+				<Row justify="space-between" align="middle">
+					<Col>
+					<Search  />
+					</Col>
+					<Col>
+						<Button type="primary">Add Company</Button>
+					</Col>
+					</Row>
+			</Card>
 			<Card bodyStyle={{'padding': '0px'}}>
+				
 				<div className="table-responsive">
 					<Table columns={tableColumns} dataSource={users} rowKey='id' />
 				</div>
+			
 				<UserView data={selectedUser} visible={userProfileVisible} close={()=> {this.closeUserProfile()}}/>
 			</Card>
+			</>
 		)
 	}
 }
